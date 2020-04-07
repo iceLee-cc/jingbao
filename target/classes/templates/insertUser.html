@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>添加用户</title>
+</head>
+<body>
+    <form th:action="@{/user/addUser}" method="post">
+        <table border="1">
+            <tr>
+                <td>姓名</td>
+                <td>真名</td>
+                <td>号码</td>
+                <td>地址</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="username"></td>
+                <td><input type="text" name="realName"></td>
+                <td><input type="text" name="phone"></td>
+                <td><input type="text" name="address"></td>
+                <td><input type="submit" name="添加"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

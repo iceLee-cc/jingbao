@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>订单信息</title>
+</head>
+<body>
+<a th:href="@{/user/insertStu}">添加用户信息</a>
+<table border="1">
+    <tr>
+        <td>订单号</td>
+        <td>实付金额</td>
+        <td>支付类型</td>
+        <td>邮费</td>
+        <td>支付状态</td>
+        <td>订单创建时间</td>
+        <td>付款时间</td>
+        <td>物流名称</td>
+        <td>物流单号</td>
+        <td>买家昵称</td>
+        <td>操作</td>
+    </tr>
+    <tr th:each="order:${list}">
+        <td th:text="${order.orderId}"></td>
+        <td th:text="${order.payment}"></td>
+        <td th:text="${order.paymentType}"></td>
+        <td th:text="${order.postPrice}"></td>
+        <td th:text="${order.status}"></td>
+        <td th:text="${order.crateTime}"></td>
+        <td th:text="${order.paymentTime}"></td>
+        <td th:text="${order.shippingName}"></td>
+        <td th:text="${order.shippingNo}"></td>
+        <td th:text="${order.userId}"></td>
+        <td th:text="${order.userName}"></td>
+        <!--<td><a th:href="@{/user/updateUser(id=${user.id})}">修改</a>
+            <a th:href="@{/user/delUser(id=${user.id})}">删除</a>-->
+        </td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改页</title>
+</head>
+<body>
+<form th:action="@{/user/doupdateUser}" method="post">
+
+    <table border=1>
+        <tr>
+            <td>ID编号</td>
+            <td>姓名</td>
+            <td>电话</td>
+            <td>地址</td>
+        </tr>
+        <tr>
+            <td><input type="text" name="id" th:value="*{user.id}"/></td>
+            <td><input type="text" name="realName" th:value="*{user.realName}"/></td>
+            <td><input type="text" name="phone" th:value="*{user.phone}"/></td>
+            <td><input type="text" name="address" th:value="*{user.address}"/></td>
+            <td><input type="submit" value="确认修改"/></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
